@@ -19,8 +19,8 @@ Cash Asset + Non-Cash Asset = Liability + Contributed Capital + Retained Earning
 * Income Statement (SCF) => Changes in Retained Earnings
 * Statement of Stockholders' Equity (SSE) => Changes in Stockholders' Equity  
 
-Asset = Liability + Stockholders' Equity
-Asset = Liability + Contributed Capital + Prior Retained Earnings + Retained Earnings
+Asset = Liability + Stockholders' Equity  
+Asset = Liability + Contributed Capital + Prior Retained Earnings + Retained Earnings  
 Asset = Liability + Contributed Capital + Prior Retained Earnings + Net Income - Dividends  
 Asset = Liability + Contributed Capital + Prior Retained Earnings + Reveneue - Expense - Dividends
 
@@ -44,19 +44,92 @@ Asset = Liability + Contributed Capital + Prior Retained Earnings + Reveneue - E
   * Common stock (par value)
   * Additional paid-in-capital (excess over par value)
   * Treasury stock (stock repurchased by company)
+```
+Dr. Cash (+A)                               150,000
+    Cr. Common Stock-Par (+SE)               50,000
+    Cr. Additional Paid in Capital (+SE)    100,000        
+```
 * **Retained Earnings (arises from operations)**
   * Accumulation of net income (revenue - expenses), less dividends, since start of business
-  * Retained Earnings(END) = Retained Earnings(BEG) + Net Income - Dividends
-### Dividens
+  * Retained Earnings[END] = Retained Earnings[BEG] + Net Income - Dividends
+### Dividends
 * Not an expense
-* Recorded as a reduction of retained earnings on the declaration date (creates a liability until payment date. The company keeps the cash corresponding to the dividends(benefit received currently) till the payment date, therefore it is a liability to the owners during this period)  
+* Recorded as a reduction of retained earnings on the declaration date (creates a liability until payment date. The company keeps the cash corresponding to the dividends, which is the benefit received currently, till the payment date, therefore it is a liability to the owners during this period)  
 ```
 Declaration date:
-Dr. Dividends (-RE,-SE)            1000
-   Cr. Dividends payable (+L)      1000
+Dr. Retained earnings (-SE)        1,000
+   Cr. Dividends payable (+L)      1,000
 ```
 ```
 Payment date:
-Dr. Dividends payable (-L)         1000
-   Cr. Cash (-A)                   1000
+Dr. Dividends payable (-L)         1,000
+   Cr. Cash (-A)                   1,000
 ```
+## Debit and Credit Bookkeeping
+### Debit Account and Credit Account
+Assets = Liabilities + Stockholders' Equity  
+Cash + Non-Cash(e.g. Account Receivable, Building, Software) = Liabilities(e.g. Account Payable, Note Payable, Debt) + Stockholders' Equity(e.g. Revenue)  
+Asset = Liability + Contributed Capital + Retained Earnings[BEG] + Revenue - Expense  
+Asset + Expense = Liability + Contributed Capital + Retained Earnings[BEG] + Revenue  
+* Every account on the **left side** of the balance sheet equation is called **Debit Account**.
+* Every account on the **right side** is called **Credit Account**.
+* In the last equation, Expense has been moved to the left side of the equation. This is to avoid the minus operation if we put it on the right side. This makes Expense a Debit Account.
+### Debit(Dr.) and Credit(Cr.)
+* Debit is an action which increases a Debit account and decreases a Credit account
+* Credit is an action which decreases a Debit account and increases a Credit account
+* **Every transaction must have at least one Debit and at least one Credit**
+* In T-account bookkeeping, Debit is written on the left side of each account(no matter it is a Debit account or a Credit account) and Credit is written on the right side
+```
+Example: (First Journal entries, then T-account)
+Transaction (1): Customer buys a product worth $1,000. Customer pays in cash directly.
+Dr. Cash (+A)           1,000
+    Cr. Revenue (+SE)   1,000
+
+Transaction (2): Company buys raw material worth $2,000 from supplier. Company pays in cash directly.
+Dr. Cash (-A)           2,000
+    Cr. Inventory (-A)  2,000
+
+Cash (Asset, Debit account)
+    Dr.      Cr.
+    ------------------
+    (1)1,000 |            Transaction (1) increases Cash account by 1,000
+             | 2,000(2)   Transaction (2) decreases Cash account by 2,000
+             |
+    ------------------
+Bal.  (1,000)|            negative number is written in the format with brackets
+
+Revenue (Stockholders' Equity, Credit account)
+    Dr.      Cr.
+    ------------------
+            | 1,000(1)    Transaction (1) increases Revenue account by 1,000
+            | 
+            |
+    ------------------
+            | 1,000     Bal.
+
+Inventory (Asset, Debit account)
+    Dr.      Cr.
+    ------------------
+    (2)2,000 |           Transaction (2) increases Inventory account by 2,000
+             | 
+             |
+    ------------------
+Bal.   2,000 |          
+```
+* To my understanding, the main reason to introduce Debit and Credit bookkeeping is to avoid negative numbers appearing on the ledger. This may avoid misunderstanding in whether to use add or minus opeartion when summarizing the transactions of an account balance or simply when reviewing the ledger. Another benefit to use Debit and Credit (esp. with Journal entries) is that it is kind of a formalized language which presents the corresponding transaction in a standard way so that it could state clearly how a transacton makes resources flow among two or more accounts.
+### Three Fundamental Bookkeeping Equations
+Assets = Liabilities + Stockholders' Equity  
+Sum of Debit = Sum of Credit  
+Account Balance[BEG] + Increase - Decrease = Account Balance[END]  
+* These three equations must be balance at all times
+* The balance sheet equation can be preserved through the use of Debits and Credits
+* Account Balance is the difference between sum of Debits and sum of Credits for the account
+```
+Account Balance[Debit] = SUM[Debit] - SUM[Credit]
+Account Balance[Credit] = SUM[Credit] - SUM[Debit]
+```
+### How to Analyze Transaction? How to record Journal Entries?
+* Which specific asset, liability, stockholders' equity, revenue or expense account does the transaction affect? Normally starts from cash account if cash is involved in the transaction
+* Does the transaction increase or decrease the affected accounts?
+* Should the accounts be debited or credited?
+* Always list Debit(Dr.) first and always indent Credit(Cr.)
