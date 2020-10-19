@@ -141,9 +141,11 @@ End Bal.  2,000 |
 ```
 * To my understanding, the main reason to introduce Debit and Credit bookkeeping is to avoid negative numbers appearing on the ledger. This may avoid confusion like whether add or minus opeartion should be used when summarizing the transactions to get an account balance. Another benefit to use Debit and Credit (esp. with Journal entries) is that it is kind of a formalized language which presents the corresponding transaction in a standard way so that it could state clearly and efficiently how a transacton makes resources flow among two or more accounts.
 ### Three Fundamental Bookkeeping Equations
+```
 Assets = Liabilities + Stockholders' Equity  
 Sum of Debit = Sum of Credit  
 Account Balance[BEG] + Increase - Decrease = Account Balance[END]  
+```
 * These three equations must be balance at all times
 * The balance sheet equation can be preserved through the use of Debits and Credits
 * Account Balance is the difference between sum of Debits and sum of Credits for the account
@@ -177,6 +179,10 @@ On 12/31/2020
         + Calculate Retained Earnings account balance: RE[END] = RE[BEG] + Revenue - Expense (so-called closing entries for temporary account)
         + Copy all account balance on Balance Sheet
         + Calculate major KPI: Total Current Asset, Net PP&E, Intangible Asset, Total Asset, Total Current Liabiility, Total Liability, Total Shareholders' Equity, Total Liability and Shareholders' Equity
+    - Create Statement of Cash Flow for the year ended 12/31/2020
+        + Classify cash related transactions into three kind of cash flow bucket(Operation, Investing, Financial)
+        + Use indirect method to create Cash Flow from Operations
+        + Use direct method to create Cash Flow from Investing Activities and Cash Flow from Financing Activities
 ```
 ### Accrued Revenue/Expense and Deferred Revenue/Expense
 ```
@@ -195,3 +201,13 @@ Accrued Revenue                 Dr. Asset       ------------> Dr. Cash
                                   Cr. Revenue                   Cr. Asset
 ```
 Nearly all tricks in accounting is resulting from the so-called **Accrual Accouting**. In Accrual Accounting, Revenue and Expense are recognized based on whether goods or services have been delivered (e.g. whether customer got benefit, whether emplyee made contribution, whether supplier delivered inventory), and they are not related with Cash Flow at all. One of the consequences of the Accural Accouting is that the Deferred/Accrued Revenue/Expense need to have adjustment entries at the end of a fiscal year (**Accouting Recognition**). 
+### Indirect Method for Cash Flow from Operations
+```
+- Start from Net Income
+- Add Depreciation and Amortization
+- Add(Minus) Losso(Gain) for disposing fixed assets
+- Add(Minus) negative(positive) changes in non-cash current assets
+- Add(Minus) positive(negative) changes in current liability
+```
+* Indirect Method is much more complicated than direct method. However, the benefit of using indirect method is that we can use Net Income and Cash Flow from Operations as benchmark to analyze the changes in various assets and liabilities, esp. the current assets and liabilities. This is a very critical approach in analyzing a company's operations.
+* Direct Method is simply adding all revenues and deducting all cost in each of the cash flow bucket
