@@ -201,6 +201,22 @@ Accrued Revenue                 Dr. Asset       ------------> Dr. Cash
                                   Cr. Revenue                   Cr. Asset
 ```
 Nearly all tricks in accounting is resulting from the so-called **Accrual Accouting**. In Accrual Accounting, Revenue and Expense are recognized based on whether goods or services have been delivered (e.g. whether customer got benefit, whether emplyee made contribution, whether supplier delivered inventory), and they are not related with Cash Flow at all. One of the consequences of the Accural Accouting is that the Deferred/Accrued Revenue/Expense need to have adjustment entries at the end of a fiscal year (**Accouting Recognition**). 
+### Statement of Cash Flows
+```
+Collections from customers -|                              |-  Payments to suppliers
+                            |                              |-  Payments to employees
+Receipts of interest and   -| --> Operating Activities --> |-  Payments of interest* and tax
+dividends on investments*   |                              |-  Other operating disbursements
+
+Divestiture of businesses  -|                              |-  Acquisition of businesses
+Sale of PP&E & intangibles -| --> Investing Activities --> |-  Acquisition of PP&E & intangibles
+Sale of investments        -|                              |-  Purchase of investments
+
+Issue of new stock         -|                              |-  Payment of dividends*
+Reissue treasury stock     -| --> Financial Activities --> |-  Purchase of treasury stock
+Borrow money               -|                              |-  Payment of principal on debt
+```
+Under IFRS, interest and dividends received and paid (the activities marked with * in table above) may be classified as opearting, investing, or financing, as long as the booking habit of the company is consistent for years
 ### Indirect Method for Cash Flow from Operations
 ```
 - Start from Net Income
