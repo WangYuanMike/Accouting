@@ -205,9 +205,15 @@ Nearly all tricks in accounting is resulting from the so-called **Accrual Accout
 ```
 - Start from Net Income
 - Add Depreciation and Amortization
-- Add(Minus) Losso(Gain) for disposing fixed assets
+- Add(Minus) Loss(Gain) on sales of PP&E or investment
 - Add(Minus) negative(positive) changes in non-cash current assets
 - Add(Minus) positive(negative) changes in current liability
 ```
 * Indirect Method is much more complicated than direct method. However, the benefit of using indirect method is that we can use Net Income and Cash Flow from Operations as benchmark to analyze the changes in various assets and liabilities, esp. the current assets and liabilities. This is a very critical approach in analyzing a company's operations.
+* Loss(Gain) on sales of PP&E or investment is based on their book value. In case an asset is depreciated too fast, one may get gain when disposing it with the market value. Similarly, when it is depreciated too slowly, one may get loss.
 * Direct Method is simply adding all revenues and deducting all cost in each of the cash flow bucket
+### Free Cash Flow
+```
+Free Cash Flow = Cash Flow from Operation - CapEx(i.e. Investment in PP&E)
+```
+Investment in PP&E should at least cover the amount of Depreciation and Amortization, which represents the maintenance cost. The residual represents the expasion of the business.
