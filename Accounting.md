@@ -139,7 +139,7 @@ Beg. Bal.     0 |
 -------------------------------
 End Bal.  2,000 |          
 ```
-* To my understanding, the main reason to introduce Debit and Credit bookkeeping is to avoid negative numbers appearing on the ledger. This may avoid confusion like whether add or minus opeartion should be used when summarizing the transactions to get an account balance. Another benefit to use Debit and Credit (esp. with Journal entries) is that it is kind of a formalized language which presents the corresponding transaction in a standard way so that it could state clearly and efficiently how a transacton makes resources flow among two or more accounts.
+To my understanding, the main reason to introduce Debit and Credit bookkeeping is to avoid negative numbers appearing on the ledger. This may avoid confusion like whether add or minus opeartion should be used when summarizing the transactions to get an account balance. Another benefit to use Debit and Credit (esp. with Journal entries) is that it is kind of a formalized language which presents the corresponding transaction in a standard way so that it could state clearly and efficiently how a transacton makes resources flow among two or more accounts.
 ### Three Fundamental Bookkeeping Equations
 ```
 Assets = Liabilities + Stockholders' Equity  
@@ -165,7 +165,7 @@ Account Balance[Credit] = SUM[Credit] - SUM[Debit]
         + During the fiscal year, for every transaction, create Journal entries and post them to T-Account
 12/31/2020
 
-On 12/31/2020
+On 12/31/2020 (In reality, it can be 2 to 4 weeks after the end of the fiscal year)
     - Adjust Entries   
         + Adjust Accrued Revenue/Expense and Deferred Revenue/Expense
         + create Journal entries and post them to T-Account
@@ -200,7 +200,7 @@ Accrued Expense                 Dr. Expense     ------------> Dr. Liability
 Accrued Revenue                 Dr. Asset       ------------> Dr. Cash
                                   Cr. Revenue                   Cr. Asset
 ```
-Nearly all tricks in accounting is resulting from the so-called **Accrual Accouting**. In Accrual Accounting, Revenue and Expense are recognized based on whether goods or services have been delivered (e.g. whether customer got benefit, whether emplyee made contribution, whether supplier delivered inventory), and they are not related with Cash Flow at all. One of the consequences of the Accural Accouting is that the Deferred/Accrued Revenue/Expense need to have adjustment entries at the end of a fiscal year (**Accouting Recognition**). 
+Almost all tricks in accounting is resulting from the so-called **Accrual Accouting**. In Accrual Accounting, Revenue and Expense are recognized based on whether goods or services have been delivered (e.g. whether customer got benefit, whether emplyee made contribution, whether supplier delivered inventory), and they are not related with Cash Flow at all. One of the consequences of the Accural Accouting is that the Deferred/Accrued Revenue/Expense need to have adjustment entries at the end of a fiscal year (**Accouting Recognition**). 
 ### Statement of Cash Flows
 ```
 Collections from customers -|                              |-  Payments to suppliers
@@ -216,7 +216,7 @@ Issue of new stock         -|                              |-  Payment of divide
 Reissue treasury stock     -| --> Financial Activities --> |-  Purchase of treasury stock
 Borrow money               -|                              |-  Payment of principal on debt
 ```
-Under IFRS, interest and dividends received and paid (the activities marked with * in table above) may be classified as opearting, investing, or financing, as long as the booking habit of the company is consistent for years
+Under IFRS, interest and dividends received and paid (the activities marked with * in table above) may be classified as opearting, investing, or financing, as long as the booking habit of the company is consistent for years.
 ### Indirect Method for Cash Flow from Operations
 ```
 - Start from Net Income
@@ -233,3 +233,73 @@ Under IFRS, interest and dividends received and paid (the activities marked with
 Free Cash Flow = Cash Flow from Operation - CapEx(i.e. Investment in PP&E)
 ```
 Investment in PP&E should at least cover the amount of Depreciation and Amortization, which represents the maintenance cost. The residual represents the expasion of the business.
+## Ratio Analysis
+### How to analyze a company's status based on its financial statements?
+* **Time-Series Ratio Analysis**: Compare financial statements of last 3 to 5 years of this company
+* **Cross-Sectional Ration Analysis**: Compare this company's status with other companies in the same industry
+```
+- Profitability
+- Growth
+    + Growth for basic financial metrics
+    + Common size analysis on balance sheet
+- DuPont Analysis
+    + Profitability (Common size analysis on income statement)
+    + Efficiency (Assets turnover)
+    + Risk (Liquidity Ratios, Leverage Ratios)
+```
+### Profitability
+```
+ROE = Net income / Average Stockholder's Equity                                     // Average means (SE[BEG] + SE[END]) / 2
+ROA = (Net income + (1 - tax rate) * Interest Expense) / Average Total Assets       // Net income adjustment for tax shield 
+ROIC = Net operatin profit after taxes / Average invested capital
+```
+### Growth
+* Basic financial metrics
+  * Sales, Assets, Operating Income, EBITDA, Net Income, ...
+* Growth Analysis (**Common Size Analysis on Balance Sheet**)
+  * Use the percentage of Assets to exclude the fundamental growth factor of assets, so that the growth of each asset account can be revealed. Similar analysis method is applied for the liabilities.
+### DuPont Analysis
+```
+ROE = Net Margin           * Assets Turnover  * Financial Leverage
+ROE = (Net Income / Sales) * (Sales / Assets) * (Assets / Equity)
+ROE = Profitability        * Efficiency       * Leverage
+```
+DuPont Analysis is a way to decode the ROE, and to find out the major cause for ROE growth, e.g. which one out of the three factors contributes most to ROE. Usually Profitability and Efficiency are considered to be a better way to achieve ROE growth. And then each of the three factors can be analyzed specificly by following ways documented below.
+### Profit Margin Analysis (Profitability)
+Use **Common Size Analysis on Income Statement** to find out the portion of each expense and income compared with sales, so that one can easily figure out the reason for a good net margin, e.g. sales price, COGS, SG&A, interest expense, tax expense.
+### Turnover Analysis (Efficiency)
+```
+Asset Turnover = Sales / Average Total Assets
+Fixed Asset Turnover = Sales / Average Net PP&E
+
+A/R Turnover = Sales / Average Accounts Receivable
+Inventory Turnover = COGS / Average Inventory
+A/P Turnover = Purchases / Average Account Payable           // Purchases = Inventory[BEG] + COGS - Inventory[END]
+
+Days Receivable = 365 / A/R Turnover
+Days Inventory = 365 / Inventory Turnover
+Days Payable = 365 / A/P Turnover
+Net Trade Cycle = A/R Days + Invetory Days + A/P Days
+```
+* Days are used more often than Turover rate, because they are more intuitive
+* Normally shorter A/R Days and Inventory Days are better, but when they are longer, it could also mean the company is expanding its business so that it purchased or produced more inventory based on optimistic expectation
+* Similarly normally longer A/P Days is a better sign, but when it is shorter, it could also mean the company is expanding its business so that it purchased more inventory to get a discount from supplier
+* Net trade cycle means the period which the company needs to borrow short-term debt to bridge its payment to supplier and money collection from customer. If the interest expense is higher than the discount from the supplier, then it does not make sense to have a long net trade cycle.
+### Common Liquidity Ratios (Leverage, i.e. Risk)
+Short-term (Ideally ratios would be over 1)
+```
+Current Ratio = Current Assets / Short-term Debt
+Quick Ratio = (Cash + Receivables) / Short-term Debt
+CFO Ratio = Cash from Operations / Average Current Liabilities
+```
+Interest coverage ratios (Ideally ratios would be over 1)
+```
+Interest Coverage = Operation Income before Depreciation / Interest Expense
+Cash Interest Coverage = (Cash from Operations + Cash Interest Paid + Cash Taxes) / Cash Interest Paid
+```
+Long-term ((Ideally ratios would be less than 1, however it needs to compare with competitors)
+```
+Debt to Equity = Total Liabilities / Shareholders' Equity
+Long-term Debt to Equity = Total Long-Term Debt / Total Stockholders' Equity
+Long-term Debt to Tangible Assest = Total Long-Term Debt / (Total Assets - Intangible Assets)
+```
