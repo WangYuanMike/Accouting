@@ -361,7 +361,7 @@ Beg. Balance       |                                                 | Beg. Bala
                    | (1)Credit Sales 30                                 |
                    |                                (2)Bad Debt Exp. 10 |
 ```
-### How to estimate uncollectibble accounts?
+### How to estimate uncollectible accounts?
 Percentage-of-sales method
 * Step 1: use Credit sales to estimate Bad Debt Expense
 * Step 2: use Bad Debt Expense to update End Balance of Allowance accounts
@@ -426,3 +426,9 @@ Cash Flow from Operating Activities     Cash Flow from Operating Activities
     * Sell A/R at a discount that reflects an interest charge and risk of uncollectibility
 * Securitization
     * Sell A/R to a seperate legal entity (Variable Interest Entity), which would then securitize the A/R
+### A quick and dirty way to check Estimated Uncollectible Percentage
+Since credit sales, write-offs, and bad debt expense may not be avaiable from financial reporting, a quick and dirty way to calculate the Estimate Uncollectible Percentage is like this:
+```
+Estimated Uncollectible Percentage = Allowance for DA / Gross A/R (i.e. Allowance for DA + Net A/R)
+```
+Use this way to compare the result for several years, and it would be helpful in finding out whether the company is manipulating this percentage so as to generate more net income.
