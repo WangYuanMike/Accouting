@@ -279,7 +279,7 @@ A/P Turnover = Purchases / Average Account Payable           // Purchases = Inve
 Days Receivable = 365 / A/R Turnover
 Days Inventory = 365 / Inventory Turnover
 Days Payable = 365 / A/P Turnover
-Net Trade Cycle = A/R Days + Invetory Days + A/P Days
+Net Trade Cycle = A/R Days + Invetory Days - A/P Days
 ```
 * Days are used more often than Turover rate, because they are more intuitive
 * Normally shorter A/R Days and Inventory Days are better, but when they are longer, it could also mean the company is expanding its business so that it purchased or produced more inventory based on optimistic expectation
@@ -302,4 +302,62 @@ Long-term ((Ideally ratios would be less than 1, however it needs to compare wit
 Debt to Equity = Total Liabilities / Shareholders' Equity
 Long-term Debt to Equity = Total Long-Term Debt / Total Stockholders' Equity
 Long-term Debt to Tangible Assest = Total Long-Term Debt / (Total Assets - Intangible Assets)
+```
+## Account Receivable
+### How to handle Bad Debt? (Allowance methods)
+```
+Transactions:
+(1) (Credit Sales) BOC makes $10 in sales on account to each of three customers: Jordan, Dakota, and Peyton
+(2) (Bad Debt Expense) At end of period, BOC estimates that $10 of sales will not be collected
+(3) (Cash Collections) In the next period, BOC collects from Jordan and Peyton
+(4) (Write-offs) After 90 days, BOC gives up on collecting from Dakota and writes-off the receivable
+(5) (Recoveries + Cash Collections) After the write-off, Dakota wins the lottery and pays us $10
+
+General Ledger:
+                    Cash(A) + A/R(A) - Allowance for DA(XA) = Revenue(SE) - Expenses(E)
+Time of sale                    30                                30
+Adjusting entry                             10                                  10
+Collection            20       (20)
+Write-off                      (10)         (10)
+Recovery                        10           10
+Collection            10       (10)
+
+A/R Ledger:
+                    Account Receivable = A/R(Jordan) + A/R(Dakota) + A/R(Peyton)
+Time of sale                30              10              10          10
+Adjusting entry
+Collections                (20)            (10)                        (10)
+Write-off                  (10)                            (10)
+Recovery                    10                              10
+Collection                 (10)                            (10)
+
+Journal entries:
+(1) Dr. Account Receivable (+A)     30
+      Cr. Sales (+R, +SE)           30
+(2) Dr. Bad Debt (+E)                               10
+      Cr. Allowance for Doubtful Accounts (+XA, -A) 10
+(3) Dr. Cash (+A)                   20
+      Cr. Account Receivable (-A)   20
+(4) Dr. Allowance for Doubtful Accounts (-XA, +A)   10
+      Cr. Account Receivable (-A)                   10
+(5) Dr. Accounts Receivable (+A)                    10
+      Cr. Allowance for Doubtful Accounts (+XA, -A) 10
+    Dr. Cash (+A)                   10
+      Cr. Account Receivable (-A)   10
+
+T-accounts:
+            Account Receivable (A)                   Allowance for Doubtful Accounts (XA)                        Cash (A)
+---------------------------------------------       ---------------------------------------        -----------------------------------
+Beg. Balance       |                                                 | Beg. Balance                 Beg. Balance           |
+(1)Credit Sales 30 |                                                 |                                                     |
+                   |                                                 | (2)Bad Debt Exp. 10                                 |
+                   | (3)Cash Collections 20                          |                              (3)Cash Collections 20 |
+                   | (4)Write-offs 10               (4)Write-offs 10 |                                                     |
+(5)Recoveries 10   |                                                 | (5)Recoveries 10                                    |
+                   | (5)Cash Collections 10                          |                              (5)Cash Collections 10 |
+
+              Sales (R, SE)                                      Bad Debt (E)
+---------------------------------------------       --------------------------------------- 
+                   | (1)Credit Sales 30                                 |
+                   |                                (2)Bad Debt Exp. 10 |
 ```
