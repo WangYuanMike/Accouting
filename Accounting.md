@@ -361,3 +361,68 @@ Beg. Balance       |                                                 | Beg. Bala
                    | (1)Credit Sales 30                                 |
                    |                                (2)Bad Debt Exp. 10 |
 ```
+### How to estimate uncollectibble accounts?
+Percentage-of-sales method
+* Step 1: use Credit sales to estimate Bad Debt Expense
+* Step 2: use Bad Debt Expense to update End Balance of Allowance accounts
+```
+Accounts Receivable (A)                              Allowance for Doubtful Accounts (XA)
+---------------------------------------------       ------------------------------------------
+Beg. Balance 10,000 |                                               | 1,100 Beg. Balance
+Credit sales 75,000 |                                               | ______ Bad Debt Expense
+                    | 69,500 Cash collections                       |
+                    | 500 Write-offs                 Write-offs 500 |
+---------------------------------------------       ------------------------------------------
+End Balance 15,000  |                                               | ______ End Balance
+
+Bad Debt Expense = Credit sales * Estimated uncollectible percentage
+                 = 75,000 * 2%
+                 = 1,500
+Allowance for Doubtful Accounts[END] = Allowance[BEG] + Bad Debt Expense - Write-offs
+                                     = 1,100 + 1,500 - 500
+                                     = 2,100
+```
+Aging-of-accounts-receivable method
+* Step 1: use End balance of each A/R account to estimate End Balance of Allowance Accounts
+* Step 2: use End balance of Allowance Accounts to update Bad Debt Expense
+```
+Accounts Receivable (A)                              Allowance for Doubtful Accounts (XA)
+---------------------------------------------       ------------------------------------------
+Beg. Balance 10,000 |                                               | 1,100 Beg. Balance
+Credit sales 75,000 |                                               | ______ Bad Debt Expense
+                    | 69,500 Cash collections                       |
+                    | 500 Write-offs                 Write-offs 500 |
+---------------------------------------------       ------------------------------------------
+End Balance 15,000  |                                               | ______ End Balance
+
+               A/R Balance      Estimated uncoll. perc.     Allowance Amount
+-------------------------------------------------------------------------------
+0-30 days        8,000              5%                            400
+31-60 days       4,000              10%                           400
+61-90 days       2,000              30%                           600
+Over 90 days     1,000              50%                           500
+-------------------------------------------------------------------------------
+Totals          15,000                                          1,900
+
+Allowance for Doubtful Accounts[END] = 1,900
+Bad Debt Expense = Allowance for Doubtful Accounts[END] - Allowance for Doubtful Accounts[BEG] + Write-offs
+                 = 1,900 - 1,100 + 500
+                 = 1,300
+```
+### Bad Debt and the Indirect Method
+```
+Method(1)                               Method (2) (Net A/R = Gross A/R - Bad Debt Expense)    
+-----------------------------------     -----------------------------------
+Net Income                              Net Income
++   Bad Debt Expense                      
++/- Change in Gross A/R                 +/- Change in Net A/R
+-----------------------------------     -----------------------------------
+Cash Flow from Operating Activities     Cash Flow from Operating Activities
+```
+### Three Ways to Collect Cash from A/R more quickly
+* Pledging
+    * Use A/R as collateral to borrow money
+* Factoring
+    * Sell A/R at a discount that reflects an interest charge and risk of uncollectibility
+* Securitization
+    * Sell A/R to a seperate legal entity (Variable Interest Entity), which would then securitize the A/R
