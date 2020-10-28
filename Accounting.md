@@ -432,3 +432,67 @@ Since credit sales, write-offs, and bad debt expense may not be avaiable from fi
 Estimated Uncollectible Percentage = Allowance for DA / Gross A/R (i.e. Allowance for DA + Net A/R)
 ```
 Use this way to compare the result for several years, and it would be helpful in finding out whether the company is manipulating this percentage so as to generate more net income.
+## Inventory
+### Inventory cost flows for a manufacturing firm
+```
+Transactions:
+(1) Kirby purchased $865 of raw materials on account
+(2) Kirby used $806 of raw materials inventory in manufacturing
+(3) Kirby paid $524 cash for manufacturing labor
+(4) Kirby paid $423 cash for power, heat, light, and other overhead
+(5) Kirby recognized $81 of depreciation for plant equipment
+(6) Kirby finished manufacturing goods that cost $1,960
+(7) Kirby sold $2,862 of goods to customers on account
+(8) The goods cost $1,938 to manufacture
+
+Inventory cost flows:
+Acquisition of                              Inventory Accounts                           Income Statement Accounts
+materials and services
+----------------------      ------------------------------------------------------      ---------------------------
+Payables, Cash, or
+Accumulated Depr.           Raw Materials               Finished Goods                  Cost of Goods Sold
+------------------          -------------------------   --------------------------      ------------------
+        |                   Beg. Bal. 110 |             Beg. Bal. 320 |                           |
+        | 865 (1)               (1) 865   | 806(2)      (6) 1,960     | 1938 (8)        (8) 1,938 |
+        |                   -------------------------   --------------------------
+        |                   End Bal. 169  |             End Bal. 342
+        |               
+        |                   Work in Process
+        |                   -------------------------
+        |                   Beg. Bal. 265 |
+        |                       (2) 806   |
+        |                                 | 1,960 (6)
+        | 524 (3)               (3) 524   |
+        | 423 (4)               (4) 423   |
+        |  81 (5)               (5)  81   |
+        |                   --------------------------
+        |                   End Bal. 139                                                SG&A Expense
+        |                                                                               --------------------------
+        | Selling costs     ----------------------------------------------------->      Selling costs |
+        | Admin. costs      ----------------------------------------------------->      Admin. costs  |
+```
+Transaction (5) is considered as an asset in inventory account "Work in Process" instead of expense, because it is a necessary part of the manufaturing process.
+### Invetory and COGS (LIFO vs. FIFO)
+```
+Cost of Goods Available for Sale = Cost of Goods Sold + Cost of Goods Held
+--------------------------------   ---------------------------------------
+Begin Inventory + New Inventory  =         COGS       + End Inventory
+     (known)        (known)              (unknown)        (unknown)
+```
+```
+LIFO vs. FIFO
+                        Begin Inventory                 Purchases
+
+2011:                   Sep 2010    Dec 2010        Feb 2011    Apr 2011    Oct 2011
+Buy 3 units     FIFO    $25         $30             $35         $40         $45
+                        Jan 2010    Mar 2010        Feb 2011    Apr 2011    Oct 2011
+Buy 3 units     LIFO    $10         $15             $35         $40         $45
+
+2011:
+Sell 3 units    FIFO   |-------------------------------------| |--------------------|
+                        COGS: $90                               End Inventory: $85
+                LIFO   |----------------------|  |-----------------------------------|
+                        End Inventory: $25        COGS: $120
+```
+* LIFO is only allowed in US. Even an international subsidiary which belongs to a US company could not use LIFO when computing COGS.
+* Ending Balance of Invetory must be carried at the lower of historical cost (original cost) or fair market value (replacement cost).
