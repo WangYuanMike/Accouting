@@ -494,5 +494,6 @@ Sell 3 units    FIFO   |-------------------------------------| |----------------
                 LIFO   |----------------------|  |-----------------------------------|
                         End Inventory: $25        COGS: $120
 ```
-* LIFO is only allowed in US. Even an international subsidiary which belongs to a US company could not use LIFO when computing COGS.
 * Ending Balance of Invetory must be carried at the lower of historical cost (original cost) or fair market value (replacement cost).
+* LIFO is only allowed in US. Even an international subsidiary which belongs to a US company could not use LIFO when computing COGS.
+* Although over the lifetime of a firm, the total amount of tax is the same under LIFO and FIFO, LIFO could result into lower tax payment in the first several years. This is because usually the purchase price is rising all the time, therefore COGS under LIFO is higher => Taxable income is lower => Lower tax paid. This would give company similar benefit as deferred tax, e.g. currency devaluation due to inflation, tax rate may be dropped serveral years later.
